@@ -367,6 +367,7 @@ splayState */
     min-height: 30vh;
     background-color: var(--footerBg);
     border-radius: 0 5rem 0 2px;
+    justify-content: space-around;
 }
 .footerLogo{
     margin-left: 10%;
@@ -383,6 +384,7 @@ splayState */
     color: var(--footerTxt);
     font-size: var(--sizeText);
     margin-bottom: 4%;
+    margin-right: 12vw;
 }
 .footerTxt>p{
     color: var(--footerTxt);
