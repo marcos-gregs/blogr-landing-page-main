@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    
+    font-size:79.1%;
+}
+ul{
+    list-style: none;
+    position: absolute;
+    margin-top: 3%;
+}
+li{
+    margin-bottom: 1%;
+}
+:root{
+    /* Fonts */
+    --sizeTitle:3rem;
+    --sizeText:1.6rem;
+    --fontUbuntu:'Ubuntu', sans-serif;
+    --fontOverpass:'Overpass', sans-serif;
+    /* ColorPrimary */
+    --lighRedText:hsl(356, 100%, 66%);
+    --veryLigthRedHouverTxt:hsl(355, 100%, 74%);
+    --veyDarkBlueHeading:hsl(208, 49%, 24%);
+    /* ColorNeutral */
+    --whiteTxt:hsl(0, 0%, 100%);
+    --footerTxt:hsl(240, 2%, 79%);
+    --bodyCopy:hsl(207, 13%, 34%);
+    --footerBg:hsl(240, 10%, 16%);
+    /* Gradiente */
+    /* intro Mobile Nav */
+    --gradientMobVeryLight:hsl(13, 100%, 72%);
+    --gradientMobLight: hsl(353, 68%, 61%);
+    /* Intro Body */
+    --gradientBodyGray:hsl(237, 17%, 21%);
+    --gradientBodyBlue:hsl(237, 23%, 32%);
+}
+body{
+    background-color: rgba(0, 0, 0, 0.057);
+    
+}
+#off{
+    display: none;
+}
+main{
+    min-height: 100%;  
+}
+/* Header */
+header{
+    background-color: var(--gradientMobVeryLight);
+    min-height: 78vh;
+
+    background-image: url('./images/bg-pattern-intro-desktop.svg'),linear-gradient(60deg, hsl(13, 100%, 72%) 0, hsl(13, 100%, 72%) 16.67%, hsl(13, 93%, 68%) 33.33%, hsla(353, 100%, 62%, 0.916) 50%, hsla(353, 100%, 62%, 0.783)66.67%, hsla(353, 100%, 62%, 0.916) 83.33%, hsla(353, 100%, 62%, 0.916) 100%);
+    ;
+    background-position: 23%;
+    border-radius: 0 0 0 10rem;
+
+}
+/* Nav */
+nav{
+    padding-top: 3%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: var(--fontUbuntu);
+    color: var(--whiteTxt);
+    text-align: center;
+}
+.navContentMenu{
+    min-width: 40vw;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    font-size: var(--sizeText);
+    
+    
+}
+.navContentMenu>div>img{
+    width: 4rem;
+}
+
+#product{
+    align-items: center;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    transition: all,1s;
+    justify-content: center;
+   
+}
+#product>label{
+    
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-left: 2%;
+    
+}
+#product>label:hover{
+    border-bottom: 1px solid white;
+}
+.arrow-up{
+   background-image: url('./images/icon-arrow-light.svg');
+   min-width: 1vw;
+   min-height: 1vw;
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin-left: 4%;
+}
+.arrow-down{
+    clip-path: polygon(100% 66%, 49% 16%, 0 66%, 0 56%, 49% 9%, 100% 56%);
+    min-width: 1vw;
+    min-height: 1vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 4%;
+    
+}
+/* ListaNav */
+.listMenu{
+    clip-path: polygon(43% 11%, 50% 0, 57% 11%, 100% 11%, 100% 100%, 0 100%, 0 11%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--lighRedText);
+    margin-top: 15%;
+    padding-top: 2%;
+    min-width: 10vw;
+    min-height: 10vw;
+}
+.listMenu>li{
+    cursor: pointer;
+}
+.listMenu>li:hover{
+   
+    border-bottom: 1px solid var(--lighRedText);
+}
+/* product ol */
+
+/* conect ol */
+.navContentBtn{
+    font-family: var(--fontUbuntu);
+    
+    min-width: 30%;
+}
+.navContentBtn>span{
+    cursor: pointer;
+    transform: all,1s;
+    font-size: .9rem;
+}
+.navContentBtn>span:hover{
+    border-bottom: 2px solid white;
+}
+/* Btns */
+.btnWhite{
+    font-family: var(--fontUbuntu);
+    font-size: .9rem;
+    margin-left: 2%;
+    color: var(--lighRedText);
+    background-color: var(--whiteTxt);
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    border: none;   
+}
+.btnWhite:hover{
+    background-color: var(--veryLigthRedHouverTxt);
+    border-color: var(--lighRedText);
+    color: var(--whiteTxt);
+}
+.btnRed{
+    font-family: var(--fontUbuntu);
+    font-size: .9rem;
+    margin-left: 2%;
+    color: var(--whiteTxt);
+    background-color: var(--lighRedText);
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    border: .1rem solid var(--whiteTxt);
+
+}
+.btnRed:hover{
+    color: var(--lighRedText);
+    background-color: var(--whiteTxt);
+    border: none;
+}
+/* Content */
+.headerContent{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10%;
+    
+}
+.headerContentBtn{
+    margin-top: 2%;
+    display: flex;
+    min-width: 60%;
+    gap: 1%;
+    align-items: center;
+    justify-content: center;
+}
+.titleHeader{
+    text-align: center;
+    color: var(--whiteTxt);
+}
+.titleHeader>h2{
+    font-size: var(--sizeTitle);
+    font-family: var(--fontOverpass);
+    font-weight: 700;
+}
+.titleHeader>p{
+    font-size: var(--sizeText);
+    font-family: var(--fontUbuntu);
+}
+
+/* Section */
+
+/* DisplayDesing */
+.displayDesign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.displayDesign>h2{
+    margin-top: 10%;
+    color: var(--gradientBodyBlue);
+    font-size: var(--sizeTitle);
+    font-family: var(--fontUbuntu);
+}
+.displayContentDesign{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+
+}
+.designContentText{
+    margin-left: 20%;
+    max-width: 30%;
+}
+.designContentText>h3{
+    font-size: var(--sizeText);
+    font-family:var(--fontUbuntu) ;
+    color: var(--gradientBodyGray);
+    margin-bottom: 5vh;
+}
+.designContentText>p{
+    justify-content: baseline;
+    font-size: 1rem;
+    font-family: var(--fontOverpass);
+    color: var(--bodyCopy); 
+    margin-bottom: 5vh; 
+}
+.designContetImg{
+    width: 80vw;
+    height: 120vh;
+    background-image: url('./images/illustration-editor-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10vw;
+}
+/* Di
+splayState */
+.stateContent{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--gradientBodyGray);
+    min-height: 60vh;
+    border-radius: 0 5rem 0 5rem;
+
+}
+.stateContentImg{
+    width: 54vw;
+    height: 60vh;
+    display: flex;
+    background-image: url('./images/bg-pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  5vh;
+    
+    align-items: center;
+}
+
+.stateText{
+    margin-left: 5%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stateText>h3{
+    padding-top: 20vh;
+    font-size: var(--sizeText);
+    font-family:var(--fontOverpass) ;
+    color: var(--whiteTxt);
+   
+}
+.stateText>p{
+    margin-top: 2%;
+    justify-content: baseline;
+    font-size: 1rem;
+    font-family: var(--fontUbuntu);
+    color: var(--footerTxt); 
+    margin-bottom: 5vh; 
+    margin-right: 3%;
+}
+/* Last Display Section */
+.blogContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.blogContentImg{
+    margin-top: 10%;
+    position: relative;
+    left: -13vw;
+}
+.blogContentImg>div{
+
+    min-width: 50vw;
+    min-height: 100vh;
+    max-width: 50%;
+    background-image: url('./images/illustration-laptop-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+}
+.blogContentText{
+    margin-top: 10%;
+    max-width:30% ;
+}
+.blogContentText>h3{
+    margin-top: 2%;
+    font-size: var(--sizeText);
+    font-family:var(--fontUbuntu) ;
+    color: var(--gradientBodyGray);
+    margin-bottom: 5vh;
+}
+.blogContentText>p{
+    justify-content: baseline;
+    font-size: 1rem;
+    font-family: var(--fontOverpass);
+    color: var(--bodyCopy); 
+    margin-bottom: 5vh; 
+}
+/* Fim Section */
+
+/* Footer */
+.footerContent{
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    margin-top: 6%;
+    width: 100%;
+    min-height: 30vh;
+    background-color: var(--footerBg);
+    border-radius: 0 5rem 0 2px;
+}
+.footerLogo{
+    margin-left: 10%;
+    background-image: url('./images/logo.svg');
+    min-width: 5vw;
+    min-height: 5vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.footerTxt{
+    font-family: var(--fontUbuntu);
+}
+.footerTxt >h5{
+    color: var(--footerTxt);
+    font-size: var(--sizeText);
+    margin-bottom: 4%;
+}
+.footerTxt>p{
+    color: var(--footerTxt);
+    font-size: 1rem;
+    margin-bottom: 2%;
+}
